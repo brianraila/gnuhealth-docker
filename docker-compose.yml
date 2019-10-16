@@ -1,14 +1,14 @@
 db:
-  #build: postgres-gnuhealth
-  image: mbsolutions/postgres-gnuhealth:3.0
+  build: postgres-gnuhealth
+  #image: mbsolutions/postgres-gnuhealth:3.0
   volumes:
     - ./postgresql-data:/var/lib/postgresql/data
   environment:
     - POSTGRES_PASSWORD=mysecret
 
 tryton:
-  #build: tryton-server-gnuhealth
-  image: mbsolutions/tryton-server-gnuhealth:3.8
+  build: tryton-server-gnuhealth
+  #image: mbsolutions/tryton-server-gnuhealth:3.8
   volumes:
     - ./tryton-data:/var/lib/tryton
   environment:
